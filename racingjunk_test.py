@@ -18,15 +18,13 @@ firefox = webdriver.Remote(
 chrome.get('https://www.racingjunk.com')
 print(chrome.title)
 
-firefox.get('https://www.racingjunk.com')
-print(firefox.title)
-
 #Locators
 mainLogoChrome= chrome.find_element_by_xpath("//div[@class='mainLogo']/a")
 classifiedsMain= chrome.find_element_by_xpath("//li[@class='menu']/a[contains(text(),'Classifieds')]")
 
 classifiedsMain.click()
 try:
+    chrome.implicitly_wait(10)
     element = chrome.find_element_by_xpath("//h1[@class='font12px'][contains(text(), 'Race, Drag')]")
 except NoSuchElementException as exception:
     print("Element not found")
