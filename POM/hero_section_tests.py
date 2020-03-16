@@ -3,11 +3,10 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pages import home_page, dirt_oval_racing_car_category_page, drag_racing_car_category_page
-from pages import off_road_and_over_land_category_page, towing_trailers_category_page
+from pages import off_road_and_over_land_category_page, towing_trailers_category_page, engines_category_page
 
 # Global set up
-selHub = 'localhost' #set up for localhost, replace with URL
-executor = 'http://' + selHub + ':4444/wd/hub'
+executor = 'http://localhost:4444/wd/hub'
 URL = "https://www.racingjunk.com"
 
 class ClickDragRacingCarsLink(unittest.TestCase):
@@ -83,5 +82,24 @@ class ClickTowingTrailersLink(unittest.TestCase):
         tow_trailers_cat_page = towing_trailers_category_page.TowingTrailersCategoryPage(self.driver)
         assert tow_trailers_cat_page.towing_trailers_title_displayed()
 
+    def tearDown(self):
+        self.driver.quit()
+
+class ClickEnginesLink(unittest.TestCase):
+    """Test case to click engine link"""
+
+    def setUp(self):
+        self.driver = webdriver.Remote(
+            command_executor=executor,
+            desired_capabilities=DesiredCapabilities.CHROME
+        )
+        self.driver.get(URL)
+
+    def test_click_engines_link(self):
+        homePage = home_page.HomePage(self.driver)
+        homePage.click_engines()
+        engines_cat_page = engines_category_page.EnginesCategoryPage(self.driver)
+        assert engines_cat_page.engines_title_displayed()
+    
     def tearDown(self):
         self.driver.quit()

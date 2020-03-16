@@ -29,3 +29,7 @@ class HomePage(BasePage):
     def click_towing_trailers(self):
         towingTrailersButton = self.driver.find_element(*HomePage.loc_a_towingTrailers_pHome)
         towingTrailersButton.click()
+
+    def click_engines(self):
+        enginesButton = self.driver.find_element(*HomePage.loc_a_engines_pHome)
+        enginesButton.click()
