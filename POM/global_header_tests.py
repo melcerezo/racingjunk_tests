@@ -32,5 +32,22 @@ class ClickImageLogo(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+class ClickLoginLink(unittest.TestCase):
+    """Test case to click Login Link in header"""
+
+    def setUp(self):
+        self.driver = webdriver.Remote(
+            command_executor=executor,
+            desired_capabilities=DesiredCapabilities.CHROME
+        )
+        self.driver.get(URL)
+
+    def test_click_login_link(self):
+        globalHeader = global_header.GlobalHeaderComponent(self.driver)
+        loginPage = login_page.LoginPage(self.driver)
+        try:
+            globalHeader.login_link_displayed()
+            globalHeader.click_login_link()
+            assert loginPage.login_header_displayed()
 
 
