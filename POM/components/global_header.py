@@ -83,6 +83,10 @@ class GlobalHeaderComponent(BaseComponent):
         registerLink = self.driver.find_element(*GlobalHeaderComponent.loc_a_registerLink_cGlobalHeader)
         return registerLink.is_displayed()
 
+    def search_bar_displayed(self):
+        searchBar = self.driver.find_element(*GlobalHeaderComponent.loc_form_searchBar_cGlobalHeader)
+        return searchBar.is_displayed()
+
     def post_ad_button_displayed(self):
         postAdButton = self.driver.find_element(*GlobalHeaderComponent.loc_btn_postAdButton_cGlobalHeader)
         return postAdButton.is_displayed()
