@@ -9,6 +9,9 @@ class GlobalHeaderComponent(BaseComponent):
     loc_a_imageLogo_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[@href="/"]')
     loc_a_loginLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[contains(text(), "Log In")]')
     loc_a_registerLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[contains(text(), "Register")]')
+    
+    # Nav Locators
+    
     loc_a_navClassifiedsMenu_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//a[contains(text(), "Classifieds")]')
     loc_a_navMostRecentAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav/ul/li/a[@href="/most_recent_ads"]')
     loc_a_navNewsTechMenu_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//a[contains(text(), "News & Tech")]')
@@ -18,11 +21,17 @@ class GlobalHeaderComponent(BaseComponent):
     loc_a_navDirectoryLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="/dealerdirectory"]')
     loc_a_navStoreLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="//shop.racingjunk.com"]')
     loc_btn_postAdButton_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav/a[@class="btnPostAd"]')
+    
+    # Classifieds Sub Menu Locators
+    
     loc_a_subMenuClassifiedsCategoriesLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/category"]')
     loc_a_subMenuClassifiedsAdvancedSearchLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/search"]')
     loc_a_subMenuClassifiedsAdsByDayLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/by_day_ads"]')
     loc_a_subMenuClassifiedsMostRecentAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/most_recent_ads"]')
     loc_a_subMenuClassifiedsMostPopularAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/most_popular_ads"]')
+    
+    # News Tech Sub Menu Locators
+    
     loc_a_subMenuNewsTechCircleTrackLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/circle-track-racing/"]')
     loc_a_subMenuNewsTechDirtTrackLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/dirt-track-racing/"]')
     loc_a_subMenuNewsTechDragRacingLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/drag-racing/"]')
@@ -45,8 +54,20 @@ class GlobalHeaderComponent(BaseComponent):
     loc_a_subMenuNewsTechCoolCarFindLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/tag/rj-cool-car-find/"]')
     loc_a_subMenuNewsTechFeaturedBuildsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/featured-vehicles/"]')
     loc_a_subMenuNewsTechPinupLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/pinup/"]')
-    loc_a_subMenuNewsTechUpcomingEventsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/events/all-types"]')
-    loc_a_subMenuNewsTechSubmitEventLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/events/create"]')
+    
+    # Event Sub Menu Locators
+    
+    loc_a_subMenuEventsUpcomingEventsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/events/all-types"]')
+    loc_a_subMenuEventsSubmitEventLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/events/create"]')
+
+    # Search locators
+
+    loc_form_searchBar_cGlobalHeader = (By.XPATH, '//form[contains(@class, "search")]')
+    loc_select_searchSelectDropdown_cGlobalHeader = (By.XPATH, '//select[@id="searchCategorySelector"]')
+    loc_input_searchInput_cGlobalHeader = (By.XPATH, '//input[@name="searchString"]')
+    loc_a_searchSubmit_cGlobalHeader = (By.XPATH, '//a[@class="searchSubmit"]')
+
+
 
     #Verify Displayed Functions
 
