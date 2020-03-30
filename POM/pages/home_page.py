@@ -14,6 +14,14 @@ class HomePage(BasePage):
     loc_a_hotRodStreetRod_pHome = (By.XPATH, '//div[@class="browseCategories"]//a[@href="/category/1010/Hot-Rod-Street-Rod-Custom.html"]')
     loc_a_transmissionAndClutches_pHome = (By.XPATH, '//div[@class="browseCategories"]//a[@href="/category/1256/Transmissions-and-Clutches.html"]')
 
+    # Verify Displayed Function
+
+    def main_featured_content_displayed(self):
+        featuredMainContent = self.driver.find_element(*HomePage.loc_div_featuredContent_pHome)
+        return featuredMainContent.is_displayed()
+
+    # Click Function
+
     def click_drag_racing_cars(self):
         dragRacingCarsButton = self.driver.find_element(*HomePage.loc_a_dragRacingCars_pHome)
         dragRacingCarsButton.click()
