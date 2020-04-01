@@ -5,38 +5,38 @@ class GlobalHeaderComponent(BaseComponent):
 
     #Locators
 
-    loc_header_headerSection_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]')
-    loc_a_imageLogo_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[@href="/"]')
-    loc_a_loginLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[contains(text(), "Log In")]')
-    loc_a_registerLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//a[contains(text(), "Register")]')
+    loc_header_headerSection_cGlobalHeader = (By.ID, 'mainHeader') 
+    loc_a_imageLogo_cGlobalHeader = (By.CSS_SELECTOR, '#mainHeader .mainLogo a')
+    loc_a_loginLink_cGlobalHeader = (By.CSS_SELECTOR, '#mainHeader ul.loggedOutNav a[href*="user_login"]')
+    loc_a_registerLink_cGlobalHeader = (By.CSS_SELECTOR, '#mainHeader ul.loggedOutNav a[href*="signup"]')
     
     # Nav Locators
     
-    loc_a_navClassifiedsMenu_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//a[contains(text(), "Classifieds")]')
-    loc_a_navMostRecentAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav/ul/li/a[@href="/most_recent_ads"]')
-    loc_a_navNewsTechMenu_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//a[contains(text(), "News & Tech")]')
-    loc_a_navEventsMenu_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//a[@href="/events"]')
-    loc_a_navForumLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="/forums"]')
-    loc_a_navPartnersLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="/partners"]')
-    loc_a_navDirectoryLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="/dealerdirectory"]')
-    loc_a_navStoreLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li//a[@href="//shop.racingjunk.com"]')
-    loc_btn_postAdButton_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav/a[@class="btnPostAd"]')
+    loc_a_navClassifiedsMenu_cGlobalHeader = (By.CSS_SELECTOR 'li.menu a[data-gaclick="MainNavDrop|Browse"]')
+    loc_a_navMostRecentAdsLink_cGlobalHeader = (By.CSS_SELECTOR, 'nav ul li a[data-gaclick="MainNavDrop|Most Recent"]')
+    loc_a_navNewsTechMenu_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu a[data-gaclick="MainNavDrop|News"]')
+    loc_a_navEventsMenu_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu a[href="/events"]')
+    loc_a_navForumLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu a[href="/forums"]')
+    loc_a_navPartnersLink_cGlobalHeader = (By.CSS_SELECTOR, 'nav ul li a[data-gaclick="MainNavDrop|Partners"]')
+    loc_a_navDirectoryLink_cGlobalHeader = (By.CSS_SELECTOR, 'nav ul li a[data-gaclick="MainNavDrop|Dealer Directory"]')
+    loc_a_navStoreLink_cGlobalHeader = (By.CSS_SELECTOR, 'nav ul li a[data-gaclick="MainNavDrop|Store"] ')
+    loc_btn_postAdButton_cGlobalHeader = (By.CSS_SELECTOR, 'nav a.btnPostAd')
     
     # Classifieds Sub Menu Locators
     
-    loc_a_subMenuClassifiedsCategoriesLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/category"]')
-    loc_a_subMenuClassifiedsAdvancedSearchLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/search"]')
-    loc_a_subMenuClassifiedsAdsByDayLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/by_day_ads"]')
-    loc_a_subMenuClassifiedsMostRecentAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/most_recent_ads"]')
-    loc_a_subMenuClassifiedsMostPopularAdsLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]/ul[@class="menu"]//li//a[@href="/most_popular_ads"]')
+    loc_a_subMenuClassifiedsCategoriesLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu ul.menu li a[data-gaclick="SubNavDrop|Categories"]')
+    loc_a_subMenuClassifiedsAdvancedSearchLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu ul.menu li a[data-gaclick="SubNavDrop|Search"]')
+    loc_a_subMenuClassifiedsAdsByDayLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu ul.menu li a[data-gaclick="SubNavDrop|Ads By Day"]')
+    loc_a_subMenuClassifiedsMostRecentAdsLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu ul.menu li a[data-gaclick="SubNavDrop|Most Recent"]')
+    loc_a_subMenuClassifiedsMostPopularAdsLink_cGlobalHeader = (By.CSS_SELECTOR, 'li.menu ul.menu li a[data-gaclick="SubNavDrop|Most Popular"]')
     
     # News Tech Sub Menu Locators
     
-    loc_a_subMenuNewsTechCircleTrackLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/circle-track-racing/"]')
-    loc_a_subMenuNewsTechDirtTrackLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/dirt-track-racing/"]')
-    loc_a_subMenuNewsTechDragRacingLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/drag-racing/"]')
-    loc_a_subMenuNewsTechMotorcyclesLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/motorcycles-and-powersports/"]')
-    loc_a_subMenuNewsTechNHRALink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/nhra/"]')
+    loc_a_subMenuNewsTechCircleTrackLink_cGlobalHeader = (By.CSS_SELECTOR, 'li a[href="/news/category/circle-track-racing/"]')
+    loc_a_subMenuNewsTechDirtTrackLink_cGlobalHeader = (By.CSS_SELECTOR, 'li a[href="/news/category/dirt-track-racing/"]')
+    loc_a_subMenuNewsTechDragRacingLink_cGlobalHeader = (By.CSS_SELECTOR, 'li a[href="/news/category/drag-racing/"]')
+    loc_a_subMenuNewsTechMotorcyclesLink_cGlobalHeader = (By.CSS_SELECTOR, 'li a[href="/news/category/motorcycles-and-powersports/"]')
+    loc_a_subMenuNewsTechNHRALink_cGlobalHeader = (By.CSS_SELECTOR, 'li a[href="/news/category/nhra"]')
     loc_a_subMenuNewsTechNASCARLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/nascar/"]')
     loc_a_subMenuNewsTechOffRoadLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/off-road-racing/"]')
     loc_a_subMenuNewsTechOtherRacingLink_cGlobalHeader = (By.XPATH, '//header[@id="mainHeader"]//nav//li[@class="menu"]//ul[contains(@class, "menu")]//a[@href="/news/category/other-racing/"]')
